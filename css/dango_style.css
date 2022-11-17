@@ -1,0 +1,1206 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #F4ECD6;
+}
+
+.container {
+    padding: 0 2%;
+}
+
+button:focus,
+input:focus {
+    outline: none;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #eee;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #847996;
+    border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #310A31;
+}
+
+::selection {
+    background-color: #847996;
+}
+
+/*
+NAVBAR STYLES---------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+.navbar_container {
+    padding: 10px 20px;
+    margin: 1.5% 2% 0.5% 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 6px 6px 0 0 rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    overflow: hidden;
+}
+
+.logo_links {
+    display: flex;
+    justify-content: center;
+}
+
+.home_link {
+    text-decoration: none;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.4em;
+    height: 100%;
+    color: rgba(0, 0, 0, 0.8);
+    transform: translateY(-2px);
+    padding-top: 25px;
+}
+
+.logo_span {
+    font-weight: 800;
+    font-size: 1.15em;
+    color: #A7CAB1;
+    transition: all 0.2s ease;
+    margin: 0 2px 0 4px;
+}
+
+.logo:hover .logo_span {
+    text-shadow: 2px 2px #A7CAB1;
+}
+
+.nav_links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.link_li {
+    margin-right: 24px;
+}
+
+.link_href {
+    color: rgba(0, 0, 0, 0.6);
+    position: relative;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    background-color: #d1d1d17c;
+    padding: 6px 16px;
+    border-radius: 20px;
+}
+
+.link_href:hover {
+    background-color: #A7CAB1;
+}
+
+
+/*
+MAIN CONTENT STYLES--------------------------------------------------------------------------------------------------------------------------------
+*/
+
+.scroll-container {
+    position: absolute;
+    top: 0;
+    right:0;
+    height: 100%;
+  }
+
+  .scroll-container:before {
+    content: '';
+    display: block;
+    height: 100vh;
+    pointer-events: none;
+  }
+
+  .scroll-container a {
+    position: sticky;
+    top: 88vh;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+.cards_container {
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    position: relative;
+}
+
+.overview_card {
+    background-color: white;
+    padding: 34px 46px;
+    border-radius: 8px;
+    box-shadow: 6px 6px 0 0 rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    position: relative;
+}
+
+.overview_card #center {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.btn_center {
+    text-align: center;
+    display: inline-block;
+}
+
+#jump_top {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+}
+
+.overview_heading {
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 14px;
+    line-height: 1.35em;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.overview_heading span {
+    color: #AA0101;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+.overview_heading2 {
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 14px;
+    line-height: 1.35em;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.overview_heading span #gr{
+    color: #46D866;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+
+.overview_info {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 30px;
+    line-height: 1.6em;
+    opacity: 0.5;
+}
+
+.btn-cont {
+    display: flex;
+}
+
+.more_info_btn,
+.symptoms_btn  {
+    display: flex;
+    border: none;
+    background-color: #d1d1d17c;
+    padding: 10px 20px;
+    border-radius: 60px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.symptoms_btn {
+    margin-left: 24px;
+}
+
+.btn_text,
+.btn_text_2 {
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.caret_icon {
+    transform: translate(-2px, 1.5px);
+    margin-left: 10px;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 1.2em;
+    transition: all 0.2s ease;
+}
+
+.more_info_btn:hover{
+    background-color: #310A31;
+}
+
+.more_info_btn:hover .caret_icon {
+    color: #f5f5f5;
+}
+
+.more_info_btn:hover .btn_text,
+.more_info_btn:hover .btn_text_2 {
+    color: #f5f5f5;
+}
+
+.justify_form{
+    text-align: center;
+    justify-content: center;
+}
+
+.overview_img {
+    float: right;
+    background-image: url(../images/covid_virus.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.breathing_img {
+    float: right;
+    background-image: url(../images/breathing_problem.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.fever_img {
+    float: right;
+    background-image: url(../images/fever.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cough_img {
+    float: right;
+    background-image: url(../images/cough.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.throat_img {
+    float: right;
+    background-image: url(../images/sore_throat.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.nose_img {
+    float: right;
+    background-image: url(../images/runny_nose.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.asthma_img {
+    float: right;
+    background-image: url(../images/asthma.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.lung_img {
+    float: right;
+    background-image: url(../images/pneumonia.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.headache_img {
+    float: right;
+    background-image: url(../images/headache.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.heart_img {
+    float: right;
+    background-image: url(../images/heart_problem.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.diabetes_img {
+    float: right;
+    background-image: url(../images/diabetes.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hypertension_img {
+    float: right;
+    background-image: url(../images/hypertension.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.fatigue_img {
+    float: right;
+    background-image: url(../images/tired.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.gastro_img {
+    float: right;
+    background-image: url(../images/gastro.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.chills_img {
+    float: right;
+    background-image: url(../images/cold.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.dizzy_img {
+    float: right;
+    background-image: url(../images/dizziness.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.pain_img {
+    float: right;
+    background-image: url(../images/body_pain.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.rash_img {
+    float: right;
+    background-image: url(../images/rash.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.smell_img {
+    float: right;
+    background-image: url(../images/loss_of_smell.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.taste_img {
+    float: right;
+    background-image: url(../images/loss_of_taste.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.eye_img {
+    float: right;
+    background-image: url(../images/red_eye.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.steps_img {
+    float: right;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.result_img {
+    justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.logo_img {
+    float: right;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.total_cases_card {
+    background-color: white;
+    padding: 32px 46px;
+    border-radius: 8px;
+    box-shadow: 6px 6px 0 0 rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    position: relative;
+}
+
+.total_cases_cols {
+    display: flex;
+    justify-content: space-between;
+}
+
+.total_deaths,
+.total_recovered,
+.total_confirmed {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cases_number {
+    font-weight: 700;
+    font-size: 2.5em;
+    margin-bottom: 12px;
+}
+
+.total_death_number {
+    color: #ff4500;
+}
+
+.total_recovered_number {
+    color: rgb(41, 167, 41);
+}
+
+.total_infected_number {
+    color: #4e54c8;
+}
+
+.total_deaths_heading,
+.total_recovered_heading,
+.total_confirmed_heading {
+    font-weight: 800;
+    font-size: 1.05em;
+    text-transform: uppercase;
+    opacity: 0.35;
+}
+
+.infected_number,
+.recovered_number,
+.death_number {
+    font-weight: 700;
+    font-size: 2.4em;
+}
+
+.death_number {
+    color: #ff4500;
+}
+
+.recovered_number {
+    color: rgb(41, 167, 41);
+}
+
+.infected_number {
+    color: #4e54c8;
+}
+
+.table_container {
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.thanks_text {
+    color: rgba(0, 0, 0, 0.6);
+    background-color: #d1d1d17c;
+    font-size: 0.9em;
+    padding: 8px 18px;
+    font-weight: 600;
+    position: absolute;
+    bottom: 15px;
+    left: 16px;
+    border-radius: 20px;
+}
+
+.thanks_link {
+    color: #A7CAB1;
+    opacity: 0.7;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.thanks_link:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.table_card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    border-radius: 8px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    height: max-content;
+    background-color: #fff;
+    box-shadow: 6px 6px 0 0 rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    margin-bottom: 0.5%;
+}
+
+.table_card::-webkit-scrollbar {
+    height: 8px;
+}
+
+.country_table {
+    width: 100%;
+    padding: 4px 8px;
+    background-color: white;
+    border-radius: 8px;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.country_table th {
+    padding: 14px 20px;
+    font-weight: 700;
+    background-color: #f5f5f5;
+    color: rgba(0, 0, 0, 0.6);
+    border-radius: 14px;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    border: 6px solid white;
+}
+
+.infected_th,
+.active_th {
+    background-color: #4e54c840 !important;
+}
+
+.recovered_th {
+    background-color: rgba(41, 167, 41, 0.4) !important;
+}
+
+.critical_th {
+    background-color: #ff8c0040 !important;
+}
+
+.deaths_th {
+    background-color: #ff440040 !important;
+}
+
+.country_table td {
+    padding: 14px 18px;
+}
+
+td {
+    border: 6px solid white;
+    border-radius: 14px;
+    font-weight: 500;
+    opacity: 0.7;
+}
+
+.number_td {
+    font-size: 0.9em;
+}
+
+.country_name_td,
+.infected_td,
+.deaths_td {
+    font-weight: 700;
+}
+
+.country_name_td{
+    width: 160px;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+tr:hover {
+    background-color: #f8f8f8;
+}
+
+.pagination {
+    margin: 16px;
+    width: 280px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: flex-end;
+}
+
+.pagination p {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.6);
+    background-color: #d1d1d17c;
+    padding: 8px 16px;
+    border-radius: 20px;
+    margin: 0 8px;
+}
+
+.next_page,
+.prev_page,
+.first_page {
+    background-color: transparent;
+    border: 2px solid rgba(0, 0, 0, 0.6);
+    border-radius: 6px;
+    padding: 4px 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.next_page:hover,
+.prev_page:hover,
+.first_page:hover {
+    border-color: #A7CAB1;
+}
+
+.next_icon,
+.prev_icon {
+    color: rgba(0, 0, 0, 0.6);
+    transition: all 0.2s ease;
+}
+
+.next_page:hover .next_icon {
+    transform: translateX(2px);
+}
+
+.prev_page:hover .prev_icon,
+.first_page:hover .prev_icon {
+    transform: translateX(-2px);
+}
+
+.next_page:hover .next_icon,
+.prev_page:hover .prev_icon,
+.first_page:hover .prev_icon {
+    color: #A7CAB1;
+}
+/*
+SYMPTOMS STYLES------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+.slider::-webkit-scrollbar {
+    height: 8px;
+}
+
+.slider::-webkit-scrollbar-track {
+    background: #eee;
+}
+
+.slider::-webkit-scrollbar-thumb {
+    background: #847996;
+    border-radius: 12px;
+}
+
+.slider::-webkit-scrollbar-thumb:hover {
+    background: #310A31;
+}
+
+.symptoms_container {
+    overflow: hidden;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+}
+
+.prevention_container{
+    padding-bottom: 1.5%;
+}
+
+#preventions .symptoms_container{
+    padding-top: 0;
+}
+
+.symptoms_heading {
+    text-align: center;
+    border-radius: 20px;
+    font-size: 1.25em;
+    font-weight: 700;
+    margin: 0 auto 20px auto;
+    padding: 10px 22px;
+    width: max-content;
+    background-color: #d1d1d17c;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding: 12px 12px 30px 12px;
+    margin-bottom: 12px;
+}
+
+.item {
+    flex-shrink: 0;
+    width: 260px;
+    height: 230px;
+    margin-right: 40px;
+    padding: 24px 36px 30px 36px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 6px 6px 0 0 rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item hr{
+    width: 100%;
+}
+
+.prevention_slider .item{
+    height: 260px;
+}
+
+.symptom_img {
+    margin-bottom: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.symptom_img img {
+    width: 120px;
+    height: 120px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.selection {
+    background-color: #d1d1d17c;
+    border-radius: 10px;
+    border: none;
+}
+
+.selection:active{
+    color: #f5f5f5;
+    background-color: #310A31;
+    border-radius: 10px;
+}
+
+.selection:hover{
+    color: #f5f5f5;
+    background-color: #310A31;
+    border-radius: 10px;
+}
+
+.prevention_img img{
+    width: 120px;
+}
+
+.symptom_text {
+    font-size: 1.2em;
+    font-weight: 700;
+    opacity: 0.6;
+    text-align: center;    
+    background-color: #d1d1d17c;
+    padding: 10px 18px;
+    border-radius: 8px;
+}
+
+.prevention_slider .symptom_text{
+    font-size: 1.2em;
+}
+
+/*
+FOOTER STYLES--------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+.footer_container {
+    padding: 1.5% 3%;
+    margin: 0 2% 1.5% 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+    box-shadow: 6px 6px 0 0 rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    overflow: hidden;
+}
+
+.copyright {
+    font-weight: 600;
+    font-size: 0.9em;
+    background-color: #d1d1d17c;
+    color: rgba(0, 0, 0, 0.7);
+    padding: 8px 18px;
+    border-radius: 20px;
+}
+
+.social-icons{
+    background-color: #d1d1d17c;
+    padding: 8px 18px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 140px;
+}
+
+.social-icon {
+    font-size: 1.1em;
+    color: rgba(0, 0, 0, 0.7);
+    transition: all 0.2s ease;
+}
+
+.social-icon:hover {
+    color: #A7CAB1;
+}
+
+/*
+MEDIA QUERIES--------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+@media (min-width: 1281px) {
+    .cards_container {
+        grid-template-columns: 2fr 1.1fr;
+    }
+
+    .overview_info {
+        font-size: 1em;
+    }
+
+    .overview_img, 
+    .breathing_img,
+    .fever_img,
+    .cough_img,
+    .throat_img,
+    .nose_img,
+    .asthma_img,
+    .lung_img,
+    .headache_img,
+    .heart_img,
+    .diabetes_img,
+    .hypertension_img,
+    .fatigue_img,
+    .gastro_img,
+    .chills_img,
+    .dizzy_img,
+    .pain_img,
+    .rash_img,
+    .smell_img,
+    .taste_img,
+    .eye_img,
+    .steps_img,
+    .logo_img{
+        width: 355px;
+        height: 345px;
+    }
+}
+
+@media (max-width: 1320px) {
+    .navbar_container {
+        padding-top: 2%;
+        padding-bottom: 2%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo_links {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .link_li {
+        margin-bottom: 20px;
+    }
+
+    .link_li:last-child {
+        margin-right: 0;
+    }
+
+    .nav_links {
+        display: flex;
+    }
+
+    .overview_img, 
+    .breathing_img,
+    .fever_img,
+    .cough_img,
+    .throat_img,
+    .nose_img,
+    .asthma_img,
+    .lung_img,
+    .headache_img,
+    .heart_img,
+    .diabetes_img,
+    .hypertension_img,
+    .fatigue_img,
+    .gastro_img,
+    .chills_img,
+    .dizzy_img,
+    .pain_img,
+    .rash_img,
+    .smell_img,
+    .taste_img,
+    .eye_img,
+    .steps_img, 
+    .logo_img{
+        width: 355px;
+        height: 345px;
+    }
+
+    .result_img {
+        width: 405px;
+        height: 405px;
+    }
+
+
+    .cards_container {
+        padding-top: 2%;
+        padding-bottom: 2%;
+        grid-template-areas: "total_number specific" "total total";
+        grid-template-columns: 1.2fr 2fr;
+        grid-template-rows: 1fr 0.5fr;
+    }
+
+    .total_cases_cols {
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+    }
+
+    .country_name {
+        margin-bottom: 20px;
+    }
+
+    .footer_container {
+        padding-top: 3%;
+        padding-bottom: 3%;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .copyright {
+        margin-top: 14px;
+    }
+
+    .social-link:first-child {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 1100px) {
+    .navbar_container {
+        padding-top: 3%;
+        padding-bottom: 3%;
+        margin: 2.5% 6% 0 6%;
+    }
+
+    .nav_links {
+        display: list-item;
+        padding-bottom: 20px;
+    }
+
+    .link_li:first-child {
+        margin-top: 20px;
+    }
+
+    .link_li:last-child {
+        margin-bottom: 0;
+    }
+
+    .cards_container {
+        padding: 4% 6%;
+        grid-template-areas: "specific" "total_number" "total";
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.7fr 0.7fr 1fr;
+    }
+
+    .overview_card {
+        min-height: 615px;
+    }
+
+    .overview_card,
+    .total_cases_card {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .country_name {
+        margin-bottom: 30px;
+    }
+
+    #steps_heading {
+        margin-bottom: -550px;
+    }
+
+    .overview_img,
+    .breathing_img,
+    .fever_img,
+    .cough_img,
+    .throat_img,
+    .nose_img,
+    .asthma_img,
+    .lung_img,
+    .headache_img,
+    .heart_img,
+    .diabetes_img,
+    .hypertension_img,
+    .fatigue_img,
+    .gastro_img,
+    .chills_img,
+    .dizzy_img,
+    .pain_img,
+    .rash_img,
+    .smell_img,
+    .taste_img,
+    .eye_img,
+    .steps_img,  
+    .logo_img {
+        position: static;
+        width: 120px;
+        height: 120px;
+    }
+
+    .btn-cont{
+        position: absolute;
+        bottom: 40px;
+    }
+
+    .symptoms_container {
+        padding: 3.5% 6% 5% 6%;
+    }
+
+    .item {
+        width: 250px;
+        height: 235px;
+    }
+
+    .symptom_img {
+        width: 80%;
+    }
+
+    .symptoms_heading {
+        margin: 0 auto 16px auto;
+        text-align: center;
+    }
+
+    .footer_container {
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+}
+
+@media (max-width: 800px) {
+    #steps_heading {
+        margin-bottom: -500px;
+    }
+}
+
+@media (max-width: 620px) {
+    #steps_heading {
+        margin-bottom: -400px;
+    }
+
+    .result_img {
+        width: 305px;
+        height: 305px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar_container{
+        margin-bottom: 1%;
+    }
+
+    .cards_container {
+        grid-template-rows: 0.8fr 0.75fr 1.2fr;
+    }
+
+    .overview_heading {
+        margin-bottom: 16px;
+    }
+
+    .overview_info {
+        margin-bottom: 20px;
+    }
+
+    .overview_img,
+    .breathing_img,
+    .fever_img,
+    .cough_img,
+    .throat_img,
+    .nose_img,
+    .asthma_img,
+    .lung_img,
+    .headache_img,
+    .heart_img,
+    .diabetes_img,
+    .hypertension_img,
+    .fatigue_img,
+    .gastro_img,
+    .chills_img,
+    .dizzy_img,
+    .pain_img,
+    .rash_img,
+    .smell_img,
+    .taste_img,
+    .eye_img,
+    .steps_img,
+    .logo_img {
+        height: 105px;
+        width: 115px;
+    }
+
+    .btn-cont{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .symptoms_btn{
+        margin: 12px 0 0 0;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .cards_container {
+        grid-template-rows: 0.9fr 0.95fr 1.3fr;
+    }
+
+    .footer_container{
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+}
